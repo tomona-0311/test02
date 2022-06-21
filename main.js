@@ -1,44 +1,16 @@
-let timer =document.getElementById("timer")；
 
-let buttons =document.getElementById("buttons")；
-
-let start =document.getElementById("start")；
-let stop =document.getElementById("stop")；
-let buttons =document.getElementById("buttons")；
-let reset =document.getElementById("reset")；
-
-
-
-
-
-function eventA(){
-  //変数名を記入
+//document.getElementById("timer").addEventListener("onclick",stertButton);
+//function stertButton(){
+//$('#timer #startButton').click(function(){
+//$('#timer').html('0:0:0:0');
+/*global timerUp*/
+/*global setIntervalnterval*/
+//timer = setIntervalnterval("Countup()", 100);
   
-  let hours = 0;
-let minutes = 0;
-let seconds= 0;
+//$(this).attr('disabled' , 'disabled');
 
+var i = 0;
+setIntervalnterval(function(){
+    console.log(i++);
+},1000);
   
-
-seconds++;
-if(seconds / 60 ==1){
-    minutes++;
-    seconds =0;
-    if(minutes / 60 ==1){
-      hours++;
-      minutes =0;
-    }
-  }
-}
-
-function timer(){
-timer.innterHTML = hours + ":" + minutes + ":" + seconds;
-}
-
-//スタート
-  start=setinterval("timer".100);}
-
-second console.log(timer);
-
-
-}

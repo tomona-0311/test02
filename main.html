@@ -1,28 +1,125 @@
- 
-    <!DOCTYPE html>
+ <!--  <!DOCTYPE html>
     <html lang="en">
       <head>
         <meta charset="utf-8">
         
-     
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>  
-        <link rel="stylesheet" href="main.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous">
+          
+        </script><link rel="stylesheet" href="main.css">
         
         <title>ストップウォッチ</title>
       </head>
+      
  
       <body>
-        
+      
         <h3>ストップウォッチ</h3>
 
-    <div id="timer">00:00:00</div>
+    <div id="timer">0:0:0:0</div>
     
     <div class="buttons">
-    <button id="start" onclick=eventA();>スタート</button>
-    <button id="stop">ストップ</button>
-    <button id="reset">リセット</button>
+    <input id ="startButto" type="button" value="スタート" onclick="startTime">
+    <input id ="stopButto" type="button" value="ストップ" onclick="stopTime">
+     <input id ="resettButto" type="button" value="リセット" onclick="resetTime">
    </div>
  
-        <script src="main.js"></script>
+        <script src="main.js" ></script>
+        
+        
       </body>
     </html>
+    
+  
+  
+<!--  function eventA(){
+  //変数名を記入
+  
+  let hours = 0;
+let minutes = 0;
+let seconds= 0;
+
+  
+
+seconds++;
+if(seconds / 60 ==1){
+    minutes++;
+    seconds =0;
+    if(minutes / 60 ==1){
+      hours++;
+      minutes =0;
+    }
+  }
+}
+
+function timer(){
+timer.innterHTML = hours + ":" + minutes + ":" + seconds;
+}
+
+
+
+
+
+
+
+var mese = 0;
+var  sec = 0;
+var min = 0;
+var hour = 0;
+
+
+
+
+
+  msec += 1;
+    if(msec > 9) {
+        msec = 0;
+        sec += 1;
+}
+
+if(sec > 9) {
+        msec = 0;
+        min += 1;
+}
+
+if(min >9){
+    min =0;
+    hour += 1;
+    
+}
+//ミリ秒
+mesecNumber = msec;
+
+//秒
+if(sec < 10){
+    secNUmber ='0' + sec.toString();
+} else {
+    secNumber = sec;
+    }
+    
+    //分
+    if(min < 10){
+        minNumber = '0' + min.toString();
+    }else{
+        minNumber = min;
+    }
+    //時
+    if(hour < 10){
+        hourNumber = '0' + hour.toString();
+    }else{
+     hourNumber = hour;
+        
+    }
+    
+    //出力
+    $('#timer , .time').html(hourNumber + ':' + minNumber + ':' + secNumber + ':' + msecNumber);
+}
+
+
+
+
+
+/*global $*/
+$(document).ready(function () {
+    $('h3').html('<p>jQueryの動作チェック</p>');
+});
+->
