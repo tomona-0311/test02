@@ -16,10 +16,11 @@
         <h3>ストップウォッチ</h3>
 
 
-    <div id="display">00:00:00</div>
+    <div id="display">0:0:0:0</div>
     
      <div class="buttons">
     <button id="startStop">START</button>
+     <button id="stopp">STOP</button>
       <button id="reset">RESET</button>
    
     </div>
@@ -32,96 +33,3 @@
     </html>
   
 
-<!-- 
-function eventA(){
-  //変数名を記入
-  
-  let hours = 0;
-let minutes = 0;
-let seconds= 0;
-
-  
-
-seconds++;
-if(seconds / 60 ==1){
-    minutes++;
-    seconds =0;
-    if(minutes / 60 ==1){
-      hours++;
-      minutes =0;
-    }
-  }
-}
-
-function timer(){
-timer.innterHTML = hours + ":" + minutes + ":" + seconds;
-}
-
-
-
-
-
-
-
-var mese = 0;
-var  sec = 0;
-var min = 0;
-var hour = 0;
-
-
-
-
-
-  msec += 1;
-    if(msec > 9) {
-        msec = 0;
-        sec += 1;
-}
-
-if(sec > 9) {
-        msec = 0;
-        min += 1;
-}
-
-if(min >9){
-    min =0;
-    hour += 1;
-    
-}
-//ミリ秒
-mesecNumber = msec;
-
-//秒
-if(sec < 10){
-    secNUmber ='0' + sec.toString();
-} else {
-    secNumber = sec;
-    }
-    
-    //分
-    if(min < 10){
-        minNumber = '0' + min.toString();
-    }else{
-        minNumber = min;
-    }
-    //時
-    if(hour < 10){
-        hourNumber = '0' + hour.toString();
-    }else{
-     hourNumber = hour;
-        
-    }
-    
-    //出力
-    $('#timer , .time').html(hourNumber + ':' + minNumber + ':' + secNumber + ':' + msecNumber);
-}
-
-
-
-
-
-/*global $*/
-$(document).ready(function () {
-    $('h3').html('<p>jQueryの動作チェック</p>');
-});
--->
