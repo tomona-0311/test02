@@ -1,4 +1,4 @@
- <!--  <!DOCTYPE html>
+<!DOCTYPE html>
     <html lang="en">
       <head>
         <meta charset="utf-8">
@@ -15,12 +15,14 @@
       
         <h3>ストップウォッチ</h3>
 
-    <div id="timer">0:0:0:0</div>
+
+    <div id="display">00:00:00</div>
     
-    <div class="buttons">
-    <input id ="startButto" type="button" value="スタート" onclick="startTime">
-    <input id ="stopButto" type="button" value="ストップ" onclick="stopTime">
-     <input id ="resettButto" type="button" value="リセット" onclick="resetTime">
+     <div class="buttons">
+    <button id="startStop">START</button>
+      <button id="reset">RESET</button>
+   
+    </div>
    </div>
  
         <script src="main.js" ></script>
@@ -28,10 +30,10 @@
         
       </body>
     </html>
-    
   
-  
-<!--  function eventA(){
+
+<!-- 
+function eventA(){
   //変数名を記入
   
   let hours = 0;
@@ -122,4 +124,4 @@ if(sec < 10){
 $(document).ready(function () {
     $('h3').html('<p>jQueryの動作チェック</p>');
 });
-->
+-->
