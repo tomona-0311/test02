@@ -2,7 +2,7 @@ let display = document.getElementById("display");
 
 
 let startStop = document.getElementById("startStop");
-let stopp = document.getElementById("stopp");
+let stop = document.getElementById("stop");
 let reset = document.getElementById("reset");
 
 
@@ -12,9 +12,11 @@ let seconds = 0;
 let mini = 0;
 
 
-
+let startTime;
+let espsedTime = 0;
+let intervalID;
 let status="stop";//はじめはlet status;stopから　let status = "stop";
-let interval;
+//let interval;
 
 function stopWatch(){
     
@@ -38,40 +40,28 @@ function stopWatch(){
        display.innerHTML = hours+ ":" + minutes + ":" + seconds + ":" + mini;
 } 
  
- 
-  startStop.addEventListener("click",function(){
+startStop.addEventListener("click",function(){
+  alert("Hellow")
       if(status == "stop"){
-        setInterval(stopWatch, 100);//はじめは　letで宣言していたが、上の文でlet interval;しているからlet を消して、stopを起動した。
+ setInterval(stopWatch, 100);//はじめは　letで宣言していたが、上の文でlet interval;しているからlet を消して、stopを起動した。
 //今この状態でスタートボタンを押すとはじまるよ。
+startTime = newDate()
+intervalID = setInterval(function(){elapsedTime += Date.now() - startTimeconsole.log(elapsedTime)},100)
+console.log(startStop)
         status == "start";
       }
 })
- stopp.addEventListener("click",function(){
+ stop.addEventListener("click",function(){
+   alert("good afternoon")
+   clearInterval(intervalID)
     if(status == "start"){
-      clearInterval(interval);
+  //    clearInterval(interval);
        status = "stop";
 }
 })
-  //   if(status == "stop"){
-   //  interval =
-   //  setInterval(stopWatch, 100);//はじめは　letで宣言していたが、上の文でlet interval;しているからlet を消して、stopを起動した。
- //  startStop.innerHTML = "STOP";
-   // status = "start";
-   //  }else{
-  //       clearInterval(interval);
-  //       startStop.innserHTML = "START";
-  //       status = "stop";
-     
-    
-     
-// stopp.addEventListener("click",function(){
-   //  clearInterval(interval);
-   //  status = "stop";
-
- 
+  
 reset.addEventListener("click",function(){
-   clearInterval(interval);
- //    startStop.innserHTML = "START";
+ clearInterval(intervalID)
         status = "stop";
    display.innerHTML = "0:0:0:0";
   hours = 0;
