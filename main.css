@@ -1,7 +1,16 @@
 
  #display{
-    font-size: 60ox
+  font-size: 40px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  letter-spacing: 6px;
 }
+
 .buttons{
     text-align: ceenter
+}
+
+h3{
+    font-size:20px;
+    margin-left:20px;
 }

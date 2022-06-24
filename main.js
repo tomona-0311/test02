@@ -14,9 +14,9 @@ let mini = 0;
 
 let startTime;
 let espsedTime = 0;
-let intervalID;
-let status="stop";//はじめはlet status;stopから　let status = "stop";
-//let interval;
+let interval;
+let status="stop"; //はじめはlet status;stopから　let status = "stop";
+
 
 function stopWatch(){
     
@@ -41,31 +41,48 @@ function stopWatch(){
 } 
  
 startStop.addEventListener("click",function(){
-  alert("Hellow")
+
       if(status == "stop"){
- setInterval(stopWatch, 100);//はじめは　letで宣言していたが、上の文でlet interval;しているからlet を消して、stopを起動した。
+       interval = setInterval(stopWatch, 100);//はじめは　letで宣言していたが、上の文でlet interval;しているからlet を消して、stopを起動した。
 //今この状態でスタートボタンを押すとはじまるよ。
-startTime = newDate()
-intervalID = setInterval(function(){elapsedTime += Date.now() - startTimeconsole.log(elapsedTime)},100)
-console.log(startStop)
-        status == "start";
-      }
-})
+startStop.disabled = true;
+stop.disabled = false;
+reset.disabled = false;
+
+        //status == "start";
+}})
+
+
  stop.addEventListener("click",function(){
-   alert("good afternoon")
-   clearInterval(intervalID)
-    if(status == "start"){
+  
+   clearInterval(interval)
+  
+
+      startStop.disabled = false;
+stop.disabled = true;
+ console.log(false)
+reset.disabled = false;
   //    clearInterval(interval);
-       status = "stop";
-}
+       
+//if(status == "start"){
+ //     startStop.disabled = false;
+//stop.disabled = true;
+// console.log(false)
+//reset.disabled = false;
+  //    clearInterval(interval);
+   //    status = "stop";
+//}
 })
   
+  
 reset.addEventListener("click",function(){
- clearInterval(intervalID)
+ clearInterval(interval)
         status = "stop";
    display.innerHTML = "0:0:0:0";
   hours = 0;
    minutes =0;
    seconds = 0;
- 
+ startStop.disabled = false;
+stop.disabled = true;
+reset.disabled = true;
    })
